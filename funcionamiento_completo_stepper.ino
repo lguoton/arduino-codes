@@ -26,12 +26,10 @@ if (Vsensor == 0){    // Si el sensor se pone en 0, entonces se activaran los si
   delay(Tseg*1000); // Este delay decidira cuanto tiempo tiene que esperar del sensor al motor de empuje para ser activado
   
   motor.step(Rmin); //Aqui se esablece cuantos pasos va a dar en el momento de empujar
-  delay(500); //Dejo el motor encendido por 500 milisegundos(.5 segundos)
-
- motor.step(-Rmin); //Aqui se esablece cuantos pasos va a dar en el momento de regresar
-  delay(500);
+  
+  motor.step(-Rmin); //Aqui se esablece cuantos pasos va a dar en el momento de regresar
  
- motor.step(0); //Se detiene un momento para luego continuar con el " If "
+  motor.step(0); //Se detiene un momento para luego continuar con el " If "
 
 }
 }
