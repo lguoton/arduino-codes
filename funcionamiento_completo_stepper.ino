@@ -1,5 +1,6 @@
 #include <Stepper.h>
 # define Pasos 360 //Aqui se establece el valor de una vuelta, significa que una vuelta del stepper representa 360 pasos
+# define sensor 14 // aqui se establece el pin del sensor
 
 Stepper motor(Pasos, 8, 9, 10, 11);
 
@@ -9,6 +10,8 @@ int Vmotor = 100; //  Esta variable es el valor en RPM(revoluciones por minuto)
 
 void setup(){
  Serial.begin(9600); // Se abren las salidas en el serial
+ 
+ pinMode(sensor,INPUT); // Establezco el sensor como entrada
  
  motor.setSpeed(Vmotor); //la velocidad del motor en RPM
 
